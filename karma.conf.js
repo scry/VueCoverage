@@ -1,5 +1,7 @@
 module.exports = (config) => {
   config.set({
+    browsers : ['Chrome'],
+
     frameworks: ['mocha', 'chai'],
 
     files: [
