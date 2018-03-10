@@ -22,13 +22,28 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
+            js: 'babel-loader',
+            options: {
+              presets: [
+                ["env", { "modules": "commonjs" }],
+                "stage-3"
+              ]
+            }
+          },
+          postLoaders: {
+            js: 'istanbul-instrumenter-loader'
           }
-          // other vue-loader options go here
         }
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        enforce: "post",
+        loader: "istanbul-instrumenter-loader",
         exclude: /node_modules/
       }
     ]

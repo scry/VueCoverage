@@ -33,6 +33,9 @@ export default {
         .reduceRight(
           (acc, val) => acc.push(val),
           [])
+    },
+    spaceSplit () {
+      return this.msg.split(' ')
     }
   }
 }

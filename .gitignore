@@ -10,3 +10,9 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+
+# Coverage reporting
+coverage/
+
+# VS Code files
+.vscode
